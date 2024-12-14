@@ -6,10 +6,14 @@
             "use": "@vercel/node"
         }
     ],
-    "routes" : [
+    "routes": [
         {
-            "src":"/(.*)",
-            "dest": "/"
+            "src": "/users_posts",
+            "dest": "/app.js"
+        },
+        {
+            "src": "/user_post",
+            "dest": "/app.js"
         }
     ]
 }
