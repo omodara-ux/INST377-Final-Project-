@@ -16,11 +16,3 @@
     "nodemon": "^3.1.9"
   }
 }
-{
-  "scripts": {
-    "build": "your-build-command",  // e.g., "next build" for Next.js
-    "start": "your-start-command", // e.g., "next start" for Next.js
-    "test": "your-test-command"    // Optional: Add if running tests
-  }
-}
-
