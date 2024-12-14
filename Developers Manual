@@ -29,7 +29,7 @@ Run Unit Tests: npm test
 Run Integration Tests: Tests/integration is where we store our integration tests. Run them using: npm run test:integration
 
 4. API Documentation
-
+The API for your server application - all GET, POST, PATCH, etc endpoints, and what they each do
 
 
 5. Known Bugs
