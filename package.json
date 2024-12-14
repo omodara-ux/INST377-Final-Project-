@@ -1,0 +1,18 @@
+{
+  "name": "supabase",
+  "version": "1.0.0",
+  "description": "integratin Supabase",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon -e '*'"
+  },
+  "author": "Kanmani Murugesan",
+  "license": "ISC",
+  "dependencies": {
+    "@supabase/supabase-js": "^2.47.7",
+    "body-parser": "^1.20.3",
+    "express": "^4.21.2",
+    "nodemon": "^3.1.9"
+  }
+}

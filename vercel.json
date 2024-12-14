@@ -1,0 +1,14 @@
+{
+    "version": 2,
+    "builds": [
+        {
+            "src": "./views/html/home.js"
+        }
+    ],
+    "routes" : [
+        {
+            "src":"/(.*)",
+            "dest": "/"
+        }
+    ]
+}
