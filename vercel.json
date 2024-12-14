@@ -2,7 +2,7 @@
     "version": 2,
     "builds": [
         {
-            "src": "./views/html/home.js"
+            "src": "home.js"
         }
     ],
     "routes" : [
