@@ -29,7 +29,95 @@ Run Unit Tests: npm test
 Run Integration Tests: Tests/integration is where we store our integration tests. Run them using: npm run test:integration
 
 4. API Documentation
-The API for your server application - all GET, POST, PATCH, etc endpoints, and what they each do
+The API for your server application - all GET, POST, PATCH, etc endpoints, and what they each do. 
+When testing the application, make all API requests to the staging environment. This API enforces rate-limits. The following limits apply:
+100 req/min for all read product queries (GET /api/v*/product requests or product page). There is no limit on product write queries.
+10 req/min for all search queries (GET /api/v*/search or GET /cgi/search.pl requests)
+2 req/min for facet queries (such as /categories, /label/organic, /ingredient/salt/category/breads,...)
+
+To add an exisisting product with missing information:
+no_nutrition_data=on (indicates if the nutrition facts are not indicated on the food label)
+
+To add nutrition facts values, units and base:
+nutrition_data_per=100g
+OR
+nutrition_data_per=serving
+serving_size=38g
+
+To add values to field that is alerady filled, use the prefix "add" before the varible name. Here is an example:
+add_categories
+
+To search for products. The search parameter has 2 possible values that need to be seperated by a comma.:
+get /api/v2/search
+
+Patch Endpoint:
+This API has only 1 Patch endpoint. This endpoint updates the information of an exisisting product in the database using its barcode.
+PATCH /api/v2/products/{barcode}. 
+Example: PATCH /api/v2/products/{4575859990}
+Request Body:
+{
+  "product_name": "Julia's Pasta",
+  "ingredients_text": "organic tomatoes, silantro, wheat"
+}
+Response: updated product information.
+
+Get Endpoints
+This api has 13 GET endpoints
+1. This endpoint gets statistics for from the Open Food Facts database. 
+GET /api/v2/statistics
+Example: GET /api/v2/statistics
+Response: 
+{
+  "products": {
+    "total": 29293039,
+    "updated": 3331
+  },
+  "brands": {
+    "total": 89091
+  },
+  "countries": {
+    "total": 121
+  }...
+
+2. This endpoint retreives list the labels for all products. Labels include organic, gluten free, etc.
+GET /api/v2/labels
+example: GET /api/v2/labels
+response:
+{
+  "labels": [
+    "organic",
+    "gluten_free",
+    "fair_trade",
+    "vegan",
+    "vegetarian",
+    "eco-friendly",
+    "palm_oil_free"
+  ]
+}
+To get labels for a single product, place products?search_terms before v2/.search terms= name of product =produc_name. Product name with spaces should be seperated by +. Labels will be the last arguement.
+example: GET /api/v2/products?search_terms=Motts+for+Tots+Applesauce&fields=product_name,labels
+response:
+{
+  "products": [
+    {
+      "product_name": "Motts for Tots Applesauce",
+      "labels": [
+        "organic",
+        "gluten_free",
+        "no_added_sugar"
+      ]
+    }
+  ]
+}
+
+
+
+
+
+
+
+
+The search js (location: INST377-Final-Project repository -> views -> js)
 
 
 5. Known Bugs
