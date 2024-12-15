@@ -1,0 +1,31 @@
+name: Deploy INST-377-final-project to Vercel
+
+on:
+  push:
+    branches:
+      - main  # Trigger deployment on push to the main branch
+  pull_request:
+    branches:
+      - main  # Optional: Deploy previews on pull requests to main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout Repository
+      uses: actions/checkout@v3
+
+    - name: Setup Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: '16' # Use the Node.js version required by your project
+
+    - name: Install Dependencies
+      run: npm install
+
+    - name: Build the Project
+      run: npm run build
+
+    - name: Deploy to Vercel
+      run: npx vercel --prod --token=$VERCEL_TOKEN
