@@ -1,18 +1,17 @@
 document.getElementById('foodInput').addEventListener('input', async function () {
     const query = this.value.trim();
     const autoComplete = document.getElementById('foodSuggestions');
-    const loadingElement = document.getElementById('loading');
 
     autoComplete.innerHTML = '';
-    
+
     if (query.length < 2) {
         return;
     }
-    loadingElement.style.display = 'block';
 
     try {
         console.log('Query:', query);
         
+        // Fetch suggestions from OpenFoodFacts API (Gives 10 related suggestions)
         const response = await fetch(`https://world.openfoodfacts.org/cgi/search.pl?search_terms=${encodeURIComponent(query)}&search_simple=1&action=process&json=1`);
         
         if (!response.ok) {
@@ -31,15 +30,12 @@ document.getElementById('foodInput').addEventListener('input', async function ()
         });
     } catch (error) {
         console.error('Error fetching suggestions:', error);
-    } finally {
-        loadingElement.style.display = 'none';
     }
 });
 
 document.getElementById('searchButton').addEventListener('click', async function () {
     const foodName = document.getElementById('foodInput').value.trim();
     const resultsDiv = document.getElementById('results');
-    const loadingElement = document.getElementById('loading');
 
     if (!foodName) {
         resultsDiv.innerHTML = '<p>Please enter a food name to search.</p>';
@@ -47,11 +43,10 @@ document.getElementById('searchButton').addEventListener('click', async function
     }
 
     resultsDiv.innerHTML = `<p>Searching for details about: ${foodName}...</p>`;
-    loadingElement.style.display = 'block';
 
     try {
         console.log('Food Name:', foodName);
-        
+        // Fetch detailed information about the selected food MUST BE IN API DATABASE
         const response = await fetch(`https://world.openfoodfacts.org/cgi/search.pl?search_terms=${encodeURIComponent(foodName)}&search_simple=1&action=process&json=1`);
         
         if (!response.ok) {
@@ -80,8 +75,5 @@ document.getElementById('searchButton').addEventListener('click', async function
     } catch (error) {
         console.error('Error fetching details:', error);
         resultsDiv.innerHTML = `<p>Error: ${error.message}</p>`;
-    } finally {
-        loadingElement.style.display = 'none';
     }
 });
-
