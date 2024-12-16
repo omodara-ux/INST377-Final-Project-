@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="images/food_favicon.PNG" type="image/x-icon">
+    <title>NutriVue | Search</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body class="body-fixed">
+    <!-- HEADER: Start -->
+    <header class="site-header">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-2">
+                    <div class="header-logo">
+                        <a href="home.html">
+                            <img src="images/nutrivue_logo.PNG" width="160" alt="Logo">
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-10">
+                    <div class="main-navigation">
+                        <nav class="header-menu">
+                             <ul class="menu food-nav-menu">
+                                <li><a href="home.html">Home</a></li>
+                                <li><a href="search.html">Search</a></li>
+                                <li><a href="contribute.html">Contribute</a></li>
+                                <li><a href="about.html">About</a></li>
+                             </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- HEADER: End -->
+
+    <!-- API INTEGRATION: Start -->
+    <section class="main-banner">
+        <div class="js-parallax-scene">
+            <div class="banner-shape-1 w-100" data-depth="0.30">
+                <img src="images/berry.PNG" alt="">
+            </div>
+            <div class="banner-shape-2 w-100" data-depth="0.25">
+                <img src="images/leaf.PNG" alt="">
+            </div>
+        </div>
+        <section class="search-food">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="search-form text-center mb-5">
+                            <p class="sec-sub-title mb-3">Search</p>
+                            <h2 class="h2-title nutrition-info">Nutrition Info</h2>
+                            <div class="sec-title-shape mb-4">
+                                <img src="images/about_divider.PNG" alt="">
+                            </div>
+                            <div class="search-box">
+                                <div class="search-row">
+                                    <input type="text" id="foodInput" list="foodSuggestions" placeholder="Enter a food product's name" autocomplete="off">
+                                    <button id="searchButton"><i class="fa-solid fa-magnifying-glass"></i></button> 
+                                </div>
+                                <div class="result-box">
+                                    <datalist id="foodSuggestions"></datalist>   
+                                </div>
+                            </div> 
+                            <div >
+                                <div class="nutrition-info-box" id="nutritionBox">
+                                    <div id="results"></div> 
+                                </div> 
+                            </div>    
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </section>
+    <!-- API INTEGRATION: End -->
+
+    <!-- FOOTER: Start -->
+    <footer class="site-footer">
+        <div class="top-footer section">
+            <div class="sec-wp">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <div class="footer-info">
+                                <div class="footer-logo">
+                                    <a href="home.html">
+                                        <img src="images/nutrivue_logo.PNG" alt="">
+                                    </a>
+                                </div>
+                                <p>See what's inside, eat with confidence.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-8">
+                        <div class="footer-flex-box">
+                            <div class="footer-table-info">
+                                <h3 class="h3-title">API Credits</h3>
+                                <ul>
+                                    <li>
+                                        <a href="https://openfoodfacts.github.io/openfoodfacts-server/api/">Open Food Facts</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="footer-menu food-nav-menu">
+                                <h3 class="h3-title">Creators</h3>
+                                <ul class="column-2">
+                                    <li><a href="https://github.com/iamsamuelm">Samuel Muma</a></li>
+                                    <li><a href="https://github.com/vibanez22">Vanessa Ibanez</a></li>
+                                    <li><a href="https://github.com/k890m">Kanmani Murugesan</a></li>
+                                    <li><a href="https://github.com/omodara-ux">Omodara Ojebuoboh</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="bottom-footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 text-center">
+                        <div class="copyright-text">
+                            <p>Copyright &copy; 2024. NutriVue. All Rights Reserved.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- FOOTER: End -->
+
+    <!-- JS DEPENDENCIES -->
+    <script src="search.js"></script>       
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>
