@@ -15,7 +15,7 @@ DATABASE_URL=<Your Supabase Database URL>
 Your Open Food Facts API Key : API_KEY=<Your Open Food Facts API Key>
 PORT=3306
 
-2. Running Application on Server
+## 2. Running Application on Server
 
 Start the Development Server:
 npm run dev
@@ -24,12 +24,12 @@ The server will run at http://localhost:3306.
 
 Production Deployment:
 It’s deployed on Vercel. From GitHub, push changes to the main branch, and Vercel will redeploy the most recent version, automatically.
-3. How to Run Tests
+## 3. How to Run Tests
 
 Run Unit Tests: npm test
 Run Integration Tests: Tests/integration is where we store our integration tests. Run them using: npm run test:integration
 
-4. API Documentation
+## 4. API Documentation
 This API does not require authentication. When testing the application, make all API requests to the staging environment. This API enforces rate-limits. The following limits apply:
 100 req/min for all read product queries (GET /api/v*/product requests or product page). There is no limit on product write queries.
 10 req/min for all search queries (GET /api/v*/search or GET /cgi/search.pl requests)
@@ -50,12 +50,12 @@ add_categories
 To search for products. The search parameter has 2 possible values that need to be seperated by a comma.:
 get /api/v2/search
 
-Patch Endpoint:
+### Patch Endpoint:
 This API has only 1 Patch endpoint. This endpoint updates the information of an exisisting product in the database using its barcode.
 PATCH /api/v2/products/{barcode}. 
 Example: PATCH /api/v2/products/{4575859990}
 
-Get Endpoints
+### Get Endpoints
 This api has 13 GET endpoints
 1. This endpoint gets statistics for from the Open Food Facts database. 
 GET /api/v2/statistics
@@ -101,7 +101,7 @@ GET /api/v2/ingredients
 12. This endpoint get a list of products that match a searcher's query
 GET /api/v2/search?q=vegan
 
-Post endpoint
+### Post endpoint
 1. In order to add an item to the database, upload the following information to the POST request.
 POST /api/v2/products
 Example
@@ -117,7 +117,7 @@ Known errors
 400 Bad Request: missing required data or invalid request body .
 500 Internal Server Error: error on the server side.
 
-5. Known Bugs
+## 5. Known Bugs
 Issue: Nutritional Info may return incomplete nutritional data as some ingredients may not be found in the external API.
 Workaround: Show data only when available, otherwise show a fallback message.
 
@@ -125,7 +125,7 @@ Other Known Bugs:
 Issues with CSS layout in the older versions of Safari.
 Open Food Facts API slow response times for large datasets.
 
-6. Future Development Roadmap
+## 6. Future Development Roadmap
     Planned Features:
 Saving custom smoothie recipes: add user authentication.
 To add dietary filters (vegan, low carb, gluten free).
@@ -140,7 +140,7 @@ UI Improvements:
 Help with mobile responsiveness.
 We can add animations for better transitions and better UX.
 
-7. Documentation Location
+## 7. Documentation Location
 This README.md file is located in the top level of the project.
 Docs for some of specific sections like API usage and database schema can be found in docs/ folder.
 
