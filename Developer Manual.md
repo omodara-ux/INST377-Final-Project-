@@ -99,9 +99,7 @@ Response:
 }
 
 ### How to know how a nutriscore is calculated
-GET: 
-
-https://world.openfoodfacts.net/api/v2/product/3017624010701?fields=product_name,nutriscore_data,nutriments,nutrition_grade
+GET: https://world.openfoodfacts.net/api/v2/product/3017624010701?fields=product_name,nutriscore_data,nutriments,nutrition_grade
 
 Response:
 {
@@ -141,9 +139,7 @@ Response:
 
 ### Products without a Nutri-Score
 
-GET: 
-
-https://world.openfoodfacts.net/api/v2/product/0180411000803/100-real-orange-juice?fields=misc_tags
+GET: https://world.openfoodfacts.net/api/v2/product/0180411000803/100-real-orange-juice?fields=misc_tags
 
 Response:
 {
