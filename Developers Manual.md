@@ -1,4 +1,4 @@
-# Developer's Manual
+# Nutrivue's Developer's Manual
 ## 1. Installing the Application and All Dependencies
 Clone the Repository:
 git clone https://github.com/omodara-ux/INST377-Final-Project-
