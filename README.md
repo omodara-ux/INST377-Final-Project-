@@ -11,7 +11,7 @@ Supabase and Vercel Deployment:
 We were able to get Supabase to work locally, but Vercel had a limit on the API deployments it allowed. As a result, we were unable to get it running fully. A demo has been provided to showcase the functionality.
 Home Page Button Redirect:
 
-The ##"Check Ingredients" button on the home page incorrectly redirects to search.html instead of the intended route search.
+The "Check Ingredients" button on the home page incorrectly redirects to search.html instead of the intended route search.
 
 
 ## Link to Developer Manual
