@@ -214,9 +214,7 @@ GET: https://world.openfoodfacts.net/api/v2/product/0180411000803?fields=product
 
 ### Search for a Product by Nutri-score
 
-Make a GET request to the Search for Products endpoint.
-
-https://world.openfoodfacts.org/api/v2/search
+GET: https://world.openfoodfacts.org/api/v2/search
 Add the search criteria used to filter the products as query parameters. For Orange Juice with a nutrition_grade of c, add query parameters categories_tags_en to filter Orange Juice while nutrition_grades_tags to filter c. 
 
 https://world.openfoodfacts.net/api/v2/search?categories_tags_en=Orange Juice&nutrit
