@@ -30,11 +30,10 @@ Run Unit Tests: npm test
 Run Integration Tests: Tests/integration is where we store our integration tests. Run them using: npm run test:integration
 
 ## 4. API Documentation
-4. API Documentation
 READ operations do not require authentication. WRITE operations require authentication. We do this as another layer of protection against spamWhen testing the application, make all API requests to the staging environment. This API enforces rate-limits. The following limits apply:
-100 req/min for all read product queries (GET /api/v*/product requests or product page). There is no limit on product write queries.
-10 req/min for all search queries (GET /api/v*/search or GET /cgi/search.pl requests)
-2 req/min for facet queries (such as /categories, /label/organic, /ingredient/salt/category/breads,...)
+- 100 req/min for all read product queries (GET /api/v*/product requests or product page). There is no limit on product write queries.
+- 10 req/min for all search queries (GET /api/v*/search or GET /cgi/search.pl requests)
+- 2 req/min for facet queries (such as /categories, /label/organic, /ingredient/salt/category/breads,...)
 
 To add an exisisting product with missing information:
 no_nutrition_data=on (indicates if the nutrition facts are not indicated on the food label)
