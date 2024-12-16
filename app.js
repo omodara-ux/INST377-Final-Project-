@@ -3,14 +3,13 @@ const supabaseClient = require('@supabase/supabase-js');
 const bodyParser = require('body-parser');
 
 const app = express();
-//const port = 3000;
-const supabaseUrl = 'https://wdtypnolaudgigkbasem.supabase.co';
-const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6IndkdHlwbm9sYXVkZ2lna2Jhc2VtIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MzQxOTQyOTAsImV4cCI6MjA0OTc3MDI5MH0.yKuTd1B1KtDo3WA0gsHQe3vQ9UQsT5gJ1pntFQdJsfA';
-const supabase = supabaseClient.createClient(supabaseUrl, supabaseKey);
-
+const port = 3000;
 app.use(bodyParser.json());
 app.use(express.static(__dirname + '/public')); // Serves static files from 'public' folder
 
+const supabaseUrl = 'https://wdtypnolaudgigkbasem.supabase.co';
+const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6IndkdHlwbm9sYXVkZ2lna2Jhc2VtIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MzQxOTQyOTAsImV4cCI6MjA0OTc3MDI5MH0.yKuTd1B1KtDo3WA0gsHQe3vQ9UQsT5gJ1pntFQdJsfA';
+const supabase = supabaseClient.createClient(supabaseUrl, supabaseKey);
 
 // Serve posts.html when the root URL (/) is accessed
 app.get('/post', (req, res) => {
@@ -71,5 +70,3 @@ app.post('/user_post', async (req, res) => {
 app.listen(port, () => {
     console.log("App is working :)");
 });
-
-module.exports = app;
