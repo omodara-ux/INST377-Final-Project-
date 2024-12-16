@@ -23,6 +23,8 @@ jobs:
 
     - name: Install Dependencies
       run: npm install
+           npm install -g vercel
+
 
 
     - name: Deploy to Vercel
