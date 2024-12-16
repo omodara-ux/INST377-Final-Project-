@@ -5,7 +5,8 @@
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon -e '*'"
+    "start": "nodemon -e '*'",
+    "build": "build ./views/home.html"
   },
   "author": "Kanmani Murugesan",
   "license": "ISC",
