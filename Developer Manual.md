@@ -55,10 +55,15 @@ To get a product's nutriscore (no authentication required)
 GET request to the Get A Product By Barcode endpoint
 
 https://world.openfoodfacts.net/api/v2/product/{barcode}
+
 Example for Nutella Ferreor
+
 GET
+
 https://world.openfoodfacts.net/api/v2/product/3017624010701
+
 Response (all the nutrition data associated with Nutella Ferrero:
+
 {
 	"code": "3017624010701",
 	"product": {
@@ -81,7 +86,9 @@ Response (all the nutrition data associated with Nutella Ferrero:
 		"added_countries_tags": [],...
 
 To limit the response by the get request, use these query parameters to specify the product fields to be returned.
+
 Example: https://world.openfoodfacts.net/api/v2/product/3017624010701?fields=product_name,nutriscore_data
+
 Response:
 {
     "code": "3017624010701",
@@ -95,7 +102,9 @@ Response:
 
 How to know how a nutriscore is calculated
 GET: 
+
 https://world.openfoodfacts.net/api/v2/product/3017624010701?fields=product_name,nutriscore_data,nutriments,nutrition_grade
+
 Response:
 {
     "code": "3017624010701",
@@ -133,8 +142,11 @@ Response:
 }
 
 Products without a Nutri-Score
+
 GET: 
+
 https://world.openfoodfacts.net/api/v2/product/0180411000803/100-real-orange-juice?fields=misc_tags
+
 Response:
 {
     "code": "0180411000803",
@@ -155,13 +167,19 @@ Response:
 }
 
 Add nutrition information to product (authetication required)
+
 Need a valid user_id and password to write the missing nutriment data to 100% Real Orange Juice.
+
 To write data to a product, make a POST request to the Add or Edit A Product endpoint.
+
 https://world.openfoodfacts.net/cgi/product_jqm2.pl
+
 Add your valid user_id and password as body parameters to your request for authentication. 
+
 Required: 
 barcode, user_id, and password
 Include other product data to be added in the request body.
+
 Response (sucessful):
 {
     "status_verbose": "fields saved",
@@ -169,7 +187,9 @@ Response (sucessful):
 }
 
 Read newly computed Nutri-Score
+
 Make a GET request to https://world.openfoodfacts.net/api/v2/product/0180411000803?fields=product_name,nutriscore_data,nutriments,nutrition_grades
+
 {
     "code": "0180411000803",
     "product": {
@@ -198,12 +218,18 @@ Make a GET request to https://world.openfoodfacts.net/api/v2/product/01804110008
 }
 
 Search for a Product by Nutri-score
+
 Make a GET request to the Search for Products endpoint.
+
 https://world.openfoodfacts.org/api/v2/search
 Add the search criteria used to filter the products as query parameters. For Orange Juice with a nutrition_grade of c, add query parameters categories_tags_en to filter Orange Juice while nutrition_grades_tags to filter c. 
+
 https://world.openfoodfacts.net/api/v2/search?categories_tags_en=Orange Juice&nutrit
+
 To limit response:
+
 Add fields to the query parameters to specify which fields to be return. 
+
 Response: 
 {
     "count": 1629,
