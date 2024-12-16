@@ -1,5 +1,5 @@
-# Developer's Manual-
-1. Installing the Application and All Dependencies
+# Developer's Manual
+## 1. Installing the Application and All Dependencies
 Clone the Repository:
 git clone https://github.com/omodara-ux/INST377-Final-Project-
 cd https://github.com/omodara-ux/INST377-Final-Project-
@@ -92,7 +92,7 @@ GET /api/v2/product_tags
 9. This endpoint gets all nutrient types in the database.
 GET /api/v2/nutriments
 
-10.This endpoint gets all the product reviews in the database 
+10. This endpoint gets all the product reviews in the database 
 GET /api/v2/product_reviews
 
 11. This endpoint gets all the ingredients in the database.
