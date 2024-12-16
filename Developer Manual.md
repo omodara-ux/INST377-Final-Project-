@@ -30,7 +30,7 @@ Run Unit Tests: npm test
 Run Integration Tests: Tests/integration is where we store our integration tests. Run them using: npm run test:integration
 
 ## 4. API Documentation
-READ operations do not require authentication. WRITE operations require authentication. We do this as another layer of protection against spamWhen testing the application, make all API requests to the staging environment. This API enforces rate-limits. The following limits apply:
+READ operations do not require authentication. WRITE operations require authentication. Make all API requests to the staging environment. This API enforces rate-limits. The following limits apply:
 - 100 req/min for all read product queries (GET /api/v*/product requests or product page). There is no limit on product write queries.
 - 10 req/min for all search queries (GET /api/v*/search or GET /cgi/search.pl requests)
 - 2 req/min for facet queries (such as /categories, /label/organic, /ingredient/salt/category/breads,...)
@@ -47,14 +47,14 @@ serving_size=38g
 To add values to field that is alerady filled, use the prefix "add" before the varible name. Here is an example:
 add_categories
 
-To search for products. The search parameter has 2 possible values that need to be seperated by a comma.:
+To search for products. The search parameter has 2 possible values that need to be seperated by a comma
 get /api/v2/search
 
-To get a product's nutriscore (no authentication required): 
-Make a GET request to the Get A Product By Barcode endpoint:
+To get a product's nutriscore (no authentication required) 
+GET request to the Get A Product By Barcode endpoint
 https://world.openfoodfacts.net/api/v2/product/{barcode}
 Example for Nutella Ferreor
-GET: 
+GET
 https://world.openfoodfacts.net/api/v2/product/3017624010701
 Response (all the nutrition data associated with Nutella Ferrero:
 {
