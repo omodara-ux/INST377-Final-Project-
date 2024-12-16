@@ -2,8 +2,7 @@
   "rewrites": [
     { "source": "/post", "destination": "/views/post.html" },
     { "source": "/about", "destination": "/views/about.html" },
-    { "source": "/(.*)", "destination": "/views/home.html" },
-    { "source": "/search", "destination": "/views/search.html"}
-
+    { "source": "/search", "destination": "/views/search.html"},
+    { "source": "/(.*)", "destination": "/views/home.html" }
   ]
 }

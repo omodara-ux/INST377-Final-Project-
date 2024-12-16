@@ -20,10 +20,6 @@ app.get('/about', (req, res) => {
     res.sendFile(__dirname + '/views/about.html');
 });
 
-app.get('/details', (req, res) => {
-    res.sendFile(__dirname + '/views/search.html');
-});
-
 app.get('/', (req, res) => {
     res.sendFile(__dirname + '/views/home.html');
 });
