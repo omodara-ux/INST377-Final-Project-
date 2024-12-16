@@ -270,7 +270,8 @@ Response:
     "skip": 0
 }
 
-Known errors
+### Known errors associated with accessing the API
+
 404 Not Found: requested product does not exist.
 400 Bad Request: missing required data or invalid request body .
 500 Internal Server Error: error on the server side.
