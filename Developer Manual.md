@@ -35,28 +35,28 @@ READ operations do not require authentication. WRITE operations require authenti
 - 10 req/min for all search queries (GET /api/v*/search or GET /cgi/search.pl requests)
 - 2 req/min for facet queries (such as /categories, /label/organic, /ingredient/salt/category/breads,...)
 
-To add an exisisting product with missing information:
+### To add an exisisting product with missing information:
 no_nutrition_data=on (indicates if the nutrition facts are not indicated on the food label)
 
-To add nutrition facts values, units and base:
+### To add nutrition facts values, units and base:
 nutrition_data_per=100g
 OR
 nutrition_data_per=serving
 serving_size=38g
 
-To add values to field that is alerady filled, use the prefix "add" before the varible name. Here is an example:
+### To add values to field that is alerady filled, use the prefix "add" before the varible name. Here is an example:
 add_categories
 
-To search for products. The search parameter has 2 possible values that need to be seperated by a comma
+### To search for products. The search parameter has 2 possible values that need to be seperated by a comma
 get /api/v2/search
 
-To get a product's nutriscore (no authentication required) 
+### To get a product's nutriscore (no authentication required) 
 
-GET request to the Get A Product By Barcode endpoint
+### GET request to the Get A Product By Barcode endpoint
 
 https://world.openfoodfacts.net/api/v2/product/{barcode}
 
-Example for Nutella Ferreor
+#### Example for Nutella Ferreor
 
 GET
 
@@ -100,7 +100,7 @@ Response:
     "status_verbose": "product found"
 }
 
-How to know how a nutriscore is calculated
+### How to know how a nutriscore is calculated
 GET: 
 
 https://world.openfoodfacts.net/api/v2/product/3017624010701?fields=product_name,nutriscore_data,nutriments,nutrition_grade
@@ -141,7 +141,7 @@ Response:
     "status_verbose": "product found"
 }
 
-Products without a Nutri-Score
+### Products without a Nutri-Score
 
 GET: 
 
@@ -166,18 +166,15 @@ Response:
     "status_verbose": "product found"
 }
 
-Add nutrition information to product (authetication required)
+### Add nutrition information to product (authetication required)
 
 Need a valid user_id and password to write the missing nutriment data to 100% Real Orange Juice.
-
 To write data to a product, make a POST request to the Add or Edit A Product endpoint.
 
 https://world.openfoodfacts.net/cgi/product_jqm2.pl
 
-Add your valid user_id and password as body parameters to your request for authentication. 
-
 Required: 
-barcode, user_id, and password
+user_id, password, barcode, user_id, and password
 Include other product data to be added in the request body.
 
 Response (sucessful):
@@ -186,7 +183,7 @@ Response (sucessful):
     "status": 1
 }
 
-Read newly computed Nutri-Score
+### Read newly computed Nutri-Score
 
 Make a GET request to https://world.openfoodfacts.net/api/v2/product/0180411000803?fields=product_name,nutriscore_data,nutriments,nutrition_grades
 
@@ -217,7 +214,7 @@ Make a GET request to https://world.openfoodfacts.net/api/v2/product/01804110008
     "status_verbose": "product found"
 }
 
-Search for a Product by Nutri-score
+### Search for a Product by Nutri-score
 
 Make a GET request to the Search for Products endpoint.
 
