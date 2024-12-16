@@ -126,7 +126,7 @@ Issues with CSS layout in the older versions of Safari.
 Open Food Facts API slow response times for large datasets.
 
 ## 6. Future Development Roadmap
-    Planned Features:
+These features could be added in the future.
 Saving custom smoothie recipes: add user authentication.
 To add dietary filters (vegan, low carb, gluten free).
 We add sorting options by NutriScore or Eco Score.
