@@ -53,7 +53,7 @@ get /api/v2/search
 To get a product's nutriscore (no authentication required): 
 Make a GET request to the Get A Product By Barcode endpoint:
 https://world.openfoodfacts.net/api/v2/product/{barcode}
-Example for Nutella Ferreor:
+Example for Nutella Ferreor
 GET: 
 https://world.openfoodfacts.net/api/v2/product/3017624010701
 Response (all the nutrition data associated with Nutella Ferrero:
