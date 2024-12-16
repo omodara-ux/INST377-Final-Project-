@@ -4,3 +4,6 @@ The application we have created is called NurtiVue , and our purpse is to help o
 
 ## Supported Platforms
 Our app is currently supported by Chrome, firefox, and Safari. We also support operating systems such as iOS and Android. With our wide range of supported platforms, users can access  NurtiVue  on their preferred device, making it simple to make informed decisions about their diet and lifestyle no matter where they are or what device they are using.
+
+## Link to Developer Manual
+https://github.com/omodara-ux/INST377-Final-Project-/blob/main/Developer%20Manual.md
