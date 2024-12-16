@@ -52,7 +52,7 @@ get /api/v2/search
 
 ### To get a product's nutriscore (no authentication required) 
 
-### GET request to the Get A Product By Barcode endpoint
+GET request to the Get A Product By Barcode endpoint
 
 https://world.openfoodfacts.net/api/v2/product/{barcode}
 
