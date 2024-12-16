@@ -183,7 +183,7 @@ Response (sucessful):
 
 ### Read newly computed Nutri-Score
 
-Make a GET request to https://world.openfoodfacts.net/api/v2/product/0180411000803?fields=product_name,nutriscore_data,nutriments,nutrition_grades
+GET: https://world.openfoodfacts.net/api/v2/product/0180411000803?fields=product_name,nutriscore_data,nutriments,nutrition_grades
 
 {
     "code": "0180411000803",
