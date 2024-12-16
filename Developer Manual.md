@@ -58,8 +58,6 @@ https://world.openfoodfacts.net/api/v2/product/{barcode}
 
 #### Example for Nutella Ferreor
 
-GET
-
 https://world.openfoodfacts.net/api/v2/product/3017624010701
 
 Response (all the nutrition data associated with Nutella Ferrero:
